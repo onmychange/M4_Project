@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="fade-in">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Radio Buttons jQuery Plugin Demo</title>
+
+    <!---Bootstrap section--->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!---Font Awesome--->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!---Font Google-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700,900|Open+Sans|Pacifico|Ubuntu" rel="stylesheet">
+
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/button.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+      function changepage() {
+        var celsheit = document.getElementById('filter-1');
+
+            window.location.href = "file:///D:/wamp64/www/YupparajComputerProject/templated-transit/celstofah/CelsToFah.html";
+      }
+    </script>
+  </head>
+  <body>
+  <div class="container">
+    <div class="filter-wrapper">
+      <h1 class="big-heading"><strong>Choice Temperature Convert</strong></h1>
+      <form name="form1">
+        <div class="image-filters">
+            <input id="filter-1" value="celsheit" type="radio" name="radio-set"><label for="filter-1">Celcius->Fahrenheit</label>
+            <input id="filter-2" type="radio" name="radio-set"><label for="filter-2">Fahrenheit->Kelvin</label>
+            <input id="filter-3"  type="radio" name="radio-set"><label for="filter-3">Kelvin->Reaumur</label>
+            <input id="reaumcels"  type="radio" name="radio-set"><label for="filter-3">Reaumur->Celcius</label>
+        </div>
+      </form>
+    <div>
+      <input type="submit" class="gotocon button" onclick="changepage()" value="Go To Convert">
+      <form>
+        <div align="center"><input type= "submit" class="gotohome button" formaction= "../index.html" value ="Go To Homepage"></div>
+      </form>
+    </div>
+
+    </div>
+  </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $( function() {
+        $('.image-filters').customradio({
+          mobileImages: true,
+		      imgsUrl: 'imgs/'
+        });
+      });
+
+    </script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>
